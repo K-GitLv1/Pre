@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IT</title>
+</head>
+<body>
+    <script>
+        // ฟังก์ชันบวก
+        function add(a, b) {
+            return a + b;
+        }
+
+        // ฟังก์ชันลบ
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        // ฟังก์ชันคูณ
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        // ฟังก์ชันหาร
+        function divide(a, b) {
+            if (b === 0) {
+                return "ไม่สามารถหารด้วย 0 ได้";
+            }
+            return a / b;
+        }
+
+        // ฟังก์ชันหารเอาเศษ
+        function modulus(a, b) {
+            if (b === 0) {
+                return "ไม่สามารถหารเอาเศษด้วย 0 ได้";
+            }
+            return a % b;
+        }
+
+        // ฟังก์ชันยกกำลัง
+        function power(base, exponent) {
+            return Math.pow(base, exponent);
+        }
+
+        // ฟังก์ชันสุ่มเลข 1-6
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        // เรียกใช้ฟังก์ชันตัวอย่าง
+        var resultAdd = add(5, 3);
+        var resultSubtract = subtract(10, 4);
+        var resultMultiply = multiply(6, 7);
+        var resultDivide = divide(20, 4);
+        var resultModulus = modulus(15, 7);
+        var resultPower = power(2, 3);
+        var randomNumber = getRandomNumber();
+
+        console.log("ผลลัพธ์การบวก: " + resultAdd);
+        console.log("ผลลัพธ์การลบ: " + resultSubtract);
+        console.log("ผลลัพธ์การคูณ: " + resultMultiply);
+        console.log("ผลลัพธ์การหาร: " + resultDivide);
+        console.log("ผลลัพธ์การหารเอาเศษ: " + resultModulus);
+        console.log("ผลลัพธ์การยกกำลัง: " + resultPower);
+        console.log("ค่าสุ่มระหว่าง 1 ถึง 6: " + randomNumber);
+    </script>
+</body>
+</html>
