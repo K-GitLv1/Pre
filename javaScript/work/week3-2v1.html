@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ตรวจสอบเลขคู่หรือคี่</title>
+    <style>
+        .even {
+            color: green;
+            font-weight: bold;
+            font-size: 1.5em; /* เพิ่มขนาดตัวอักษรให้ใหญ่ขึ้น */
+        }
+    
+        .odd {
+            color: red;
+            font-weight: bold;
+            font-size: 1.5em; /* เพิ่มขนาดตัวอักษรให้ใหญ่ขึ้น */
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="numberForm">
+        <label for="number">ป้อนตัวเลข: </label>
+        <input type="number" id="number" required>
+        <button type="button" onclick="checkNumber()">ตรวจสอบ</button>
+        <button type="button" onclick="clearResult()">ล้าง</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        function checkNumber() {
+            const numberInput = document.getElementById("number");
+            const resultParagraph = document.getElementById("result");
+
+            const number = parseInt(numberInput.value);
+
+            if (!isNaN(number)) {
+                if (number % 2 === 0) {
+                    resultParagraph.textContent = `${number} เป็นเลขคู่`;
+                    resultParagraph.classList.remove("odd");
+                    resultParagraph.classList.add("even");
+                } else {
+                    resultParagraph.textContent = `${number} เป็นเลขคี่`;
+                    resultParagraph.classList.remove("even");
+                    resultParagraph.classList.add("odd");
+                }
+            } else {
+                resultParagraph.textContent = "โปรดป้อนตัวเลขที่ถูกต้อง";
+                resultParagraph.classList.remove("even", "odd");
+            }
+        }
+
+        function clearResult() {
+            const resultParagraph = document.getElementById("result");
+            resultParagraph.textContent = "";
+            resultParagraph.classList.remove("even", "odd");
+        }
+    </script>
+</body>
+</html>
