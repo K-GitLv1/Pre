@@ -1,0 +1,22 @@
+ให้ทำฟอร์ม รับสมัครสมาชิกเกมส์ โดยมีการตรวจสอบค่า
+    ชื่อ ภาษาอังกฤ
+    นามสกุล ภาษาอังกฤษ
+    e-mail ให้ถูกรูปแบบ
+    มีการเลือกเพศ ใช้ radio
+    มีการเลือกระดับการศึกษา select / list
+    มีปุ่มกดเปลี่ยนสีพื้นหลังของฟอร์มรับสมัคร
+    มีการเลือกงานอดิเรก ที่เป็นแบบ / checkbox
+    แสดงผล แบบ alert
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนสีมีอนิเมชัน */
+}
+
+form {
+    width: 500px;
+    margin: 50px auto;
+    padding: 70px;
+    border: 10px solid #00ff88;
+    border-radius: 50px;
+}
