@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+</head>
+<body>
+
+<h2>Submit Form</h2>
+
+<form id="myForm" action="http://192.168.100.12/testajax/ajax_finish.php" method="get">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="surname" required><br>
+
+    <label for="sex">Sex:</label>
+    <select id="sex" name="sex" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select><br>
+
+    <label for="depart">Department:</label>
+    <select id="depart" name="depart" required>
+        <option value="IT">IT</option>
+        <option value="Logistic">Logistic</option>
+    </select><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <button type="button" onclick="submitForm('get')">Submit (GET)</button>
+</form>
+
+<form id="myFormPost" action="http://192.168.100.12/testajax/ajax_finish.php" method="post" style="margin-top: 20px;">
+    <label for="namePost">Name:</label>
+    <input type="text" id="namePost" name="name" required><br>
+
+    <label for="surnamePost">Surname:</label>
+    <input type="text" id="surnamePost" name="surname" required><br>
+
+    <label for="sexPost">Sex:</label>
+    <select id="sexPost" name="sex" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select><br>
+
+    <label for="depart">Department:</label>
+    <select id="depart" name="depart" required>
+        <option value="IT">IT</option>
+        <option value="Logistic">Logistic</option>
+    </select><br>
+
+    <label for="agePost">Age:</label>
+    <input type="number" id="agePost" name="age" required><br>
+
+    <button type="button" onclick="submitForm('post')">Submit (POST)</button>
+</form>
+
+<script src="submitForm.js"></script>
+
+</body>
+</html>
